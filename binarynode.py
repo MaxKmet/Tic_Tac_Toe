@@ -56,11 +56,11 @@ class BinaryNode:
         """
         win = self.board.winner()
         if win == Board.CELL_X:
-            self.scores = [0, 1]  # 0 steps to winning (because won)
+            self.scores = [0, 9]  # 0 steps to winning (because won)
         elif win == Board.CELL_0:
-            self.scores = [1, 0]
+            self.scores = [9, 0]
         elif win == Board.CELL_EMPTY and self.board.is_full():
-            self.scores = [1, 1]
+            self.scores = [9, 9]
         else:
             self.add_children()
 
